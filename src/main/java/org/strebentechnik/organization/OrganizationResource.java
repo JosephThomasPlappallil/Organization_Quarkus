@@ -17,7 +17,7 @@ import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 @Tag(name="Organizations")
 public class OrganizationResource {
 
-     // Create Employee
+     // Create Organization
      @POST
      @Consumes(MediaType.APPLICATION_JSON)
      @Produces(MediaType.APPLICATION_JSON)
@@ -26,15 +26,16 @@ public class OrganizationResource {
          organizationEntity.persist();
          return Response.status(Status.CREATED).build();
      }
+     
  
-     // Get all employees
+     // Get all Organizations
      @GET
      @Produces(MediaType.APPLICATION_JSON)
      public Response listAllOrganiations() {
          return Response.ok(OrganizationEntity.listAll()).build();
      }
  
-     // Get employee by ID
+     // Get Organization by ID
      @Path("/{id}")
      @GET
      @Produces(MediaType.APPLICATION_JSON)
@@ -43,7 +44,7 @@ public class OrganizationResource {
          return Response.ok(organizationEntity).build();
      }
  
-     // Delete employee by ID
+     // Delete Organization by ID
      @Path("/{id}")
      @DELETE
      @Produces(MediaType.APPLICATION_JSON)
@@ -52,5 +53,7 @@ public class OrganizationResource {
          OrganizationEntity.deleteById(id);
          return Response.noContent().build();
      }
+
+
     
 }
