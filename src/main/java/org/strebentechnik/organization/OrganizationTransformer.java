@@ -10,8 +10,8 @@ public interface OrganizationTransformer{
 
     Organization toResource(OrganizationEntity organizationEntity);
 
-    List<Organization> map(List<OrganizationEntity> employeeEntityList);
+    List<Organization> map(List<OrganizationEntity> organizationEntityList);
 
-    OrganizationEntity toEntity(Organization employee);
+    OrganizationEntity toEntity(Organization organization);
 
 }
