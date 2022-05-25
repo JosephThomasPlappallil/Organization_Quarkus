@@ -1,1 +1,0 @@
-INSERT INTO organization( id, code, created_at, created_by, details, name, parent_code, parent_id, short_name, tax_identifier, updated_at, updated_by) VALUES(1,'123','2020-10-05 14:01:10','Joseph','kndndk','Streben Technik','1062','10','Streben','100','2020-10-05 14:01:10','manu');
